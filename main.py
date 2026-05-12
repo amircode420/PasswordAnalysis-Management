@@ -26,7 +26,7 @@ class PasswordManager(QWidget):
         super().__init__()
         self.setWindowTitle("Password Analysis and Management Tool")
         self.resize(800, 600)
-        self.setStyleSheet("background-color: #899499; color: white;")
+        self.setStyleSheet("background-color: #9333EA; color: white;")
         self.password_analyzer = PasswordAnalyzer()
         self.generator = PasswordGenerator()
         self.main_vault = PasswordVault()
@@ -43,7 +43,13 @@ class PasswordManager(QWidget):
         
         # MAIN LABEL
         self.title_label = QLabel("Password Analysis and Mangement Tool")
-        self.title_label.setStyleSheet("font-size: 25px; font-weight: bold; color: white;")
+        self.title_label.setStyleSheet(f'''QLabel{{
+            font-family: "Cascadia Code";
+            font-size: 30px;
+            font-weight: bold; 
+            color: white;
+        }}
+        ''')
         layout2.addWidget(self.title_label, 0 , Qt.AlignCenter)
 
         layout2.addSpacing(10)
@@ -52,9 +58,10 @@ class PasswordManager(QWidget):
         self.password_input = QLineEdit()
         self.password_input.setEchoMode(QLineEdit.Password)
         self.password_input.setStyleSheet(f'''QLineEdit{{
+            font-family: "Cascadia Code";
             font-size: 15px;
-            color: black;
-            background-color: white;
+            color: white;
+            background-color: #1F2937;
             padding-right: 30px;
             border: 2px solid;
             }}              
@@ -79,6 +86,7 @@ class PasswordManager(QWidget):
         self.analyze_btn.setStyleSheet(
             f'''
             QPushButton{{
+            font-family: "Cascadia Code";
             font-size: 20px;
             background-color: white;
             color: black;
@@ -99,6 +107,10 @@ class PasswordManager(QWidget):
 
         # PROGRESS COLOR BAR
         self.color_bar = QProgressBar()
+        self.color_bar.setStyleSheet(f'''QProgressBar{{
+                background-color: #1F2937;
+        }}
+                                     ''')
         self.color_bar.setFixedWidth(300)
         self.color_bar.setTextVisible(False)
         layout2.addWidget(self.color_bar, 0, Qt.AlignCenter)
@@ -110,10 +122,10 @@ class PasswordManager(QWidget):
         self.res_label = QLabel("Analysis Results: ")
         self.res_label.setStyleSheet(f'''
                         QLabel{{
+                            font-family: :"Cascadia Code";
                             font-size: 18px;
                             font-weight: bold;
-                            color: black;
-                            
+                            color: white;                            
                         }}            
                         ''')
         layout2.addWidget(self.res_label, 0, Qt.AlignCenter)
@@ -123,9 +135,11 @@ class PasswordManager(QWidget):
         self.res_text.setPlaceholderText("Results will appear here...")
         self.res_text.setStyleSheet(f'''
             QTextEdit{{
+                font-family: "Cascadia Code";
                 font-size: 15px;
-                color: black;
-                background-color: white;
+                color: white;
+                background-color: #1F2937;
+                border: white;
             }}
         ''')
         self.res_text.setFixedHeight(250)
@@ -142,6 +156,7 @@ class PasswordManager(QWidget):
         self.gen_pass_btn = QPushButton("Password Generator")
         self.gen_pass_btn.setStyleSheet(f'''
                                 QPushButton{{
+                                    font-family: "Cascadia Code";
                                     background-color: white;
                                     color: black;
                                     font-size: 15px;
@@ -159,6 +174,7 @@ class PasswordManager(QWidget):
         self.vault_btn = QPushButton("Password Vault")
         self.vault_btn.setStyleSheet(f'''
                     QPushButton{{
+                            font-family: "Cascadia Code";
                             font-size: 15px;
                             font-weight: bold;
                             background-color: white;
