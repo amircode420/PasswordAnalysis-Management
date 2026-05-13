@@ -42,7 +42,7 @@ class PasswordManager(QWidget):
         #layout2.addStretch()
         
         # MAIN LABEL
-        self.title_label = QLabel("Password Analysis and Mangement Tool")
+        self.title_label = QLabel("Password Analysis and Management Tool")
         self.title_label.setStyleSheet(f'''QLabel{{
             font-family: "Cascadia Code";
             font-size: 30px;
