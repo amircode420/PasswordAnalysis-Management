@@ -26,7 +26,7 @@ class PasswordManager(QWidget):
         super().__init__()
         self.setWindowTitle("Password Analysis and Management Tool")
         self.resize(800, 600)
-        self.setStyleSheet("background-color: #9333EA; color: white;")
+        self.setStyleSheet("background-color: #009B9F; color: white;")
         self.password_analyzer = PasswordAnalyzer()
         self.generator = PasswordGenerator()
         self.main_vault = PasswordVault()
@@ -47,7 +47,7 @@ class PasswordManager(QWidget):
             font-family: "Cascadia Code";
             font-size: 30px;
             font-weight: bold; 
-            color: white;
+            color: black;
         }}
         ''')
         layout2.addWidget(self.title_label, 0 , Qt.AlignCenter)
@@ -125,7 +125,7 @@ class PasswordManager(QWidget):
                             font-family: :"Cascadia Code";
                             font-size: 18px;
                             font-weight: bold;
-                            color: white;                            
+                            color: black;                            
                         }}            
                         ''')
         layout2.addWidget(self.res_label, 0, Qt.AlignCenter)
